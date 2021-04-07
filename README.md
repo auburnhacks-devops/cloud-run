@@ -7,6 +7,7 @@
 # Deploy to GCP
 1. Update your code in the repo(https://github.com/auburnhacks-devops/cloud-run.git)
 2. Click on below button to deploy
-3. [![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
+
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
 
 # Access the app
