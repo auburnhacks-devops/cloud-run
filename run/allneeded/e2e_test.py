@@ -67,7 +67,7 @@ def container_image():
 @pytest.fixture
 def deployed_service(container_image):
     # Deploy image to Cloud Run
-    service_name = f"helloworld-{SUFFIX}"
+    service_name = f"allneeded-{SUFFIX}"
     subprocess.run(
         [
             "gcloud",
