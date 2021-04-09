@@ -1,2 +1,5 @@
-Flask==1.1.2
-gunicorn==20.1.0
+pandas
+flask
+requests
+flask_table
+gunicorn==19.3.0
