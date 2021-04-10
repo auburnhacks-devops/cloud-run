@@ -23,6 +23,8 @@ import os
 import sys
 from datetime import datetime
 CSV_URL = 'https://api.covidtracking.com/v1/states/current.csv'
+data=pd.read_csv(CSV_URL)
+
 app = Flask(__name__)
 
 
