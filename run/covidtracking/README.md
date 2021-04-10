@@ -5,18 +5,18 @@ This sample shows how to deploy a Hello World application to Cloud Run.
 [![Run in Google Cloud][run_img]][run_link]
 
 [run_img]: https://storage.googleapis.com/cloudrun/button.svg
-[run_link]: https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=https://github.com/auburnhacks-devops/cloud-run&cloudshell_working_dir=run/allneeded
+[run_link]: https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=https://github.com/auburnhacks-devops/cloud-run&cloudshell_working_dir=run/covidtracking
 
 ## Build
 
 ```
-docker build --tag allneeded:python .
+docker build --tag covidtracking:python .
 ```
 
 ## Run Locally
 
 ```
-docker run --rm -p 9090:8080 -e PORT=8080 allneeded:python
+docker run --rm -p 9090:8080 -e PORT=8080 covidtracking:python
 ```
 
 ## Test
@@ -34,11 +34,11 @@ _Note: you may need to install `pytest` using `pip install pytest`._
 export GOOGLE_CLOUD_PROJECT=<PROJECT_ID>
 
 # Submit a build using Google Cloud Build
-gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/allneeded
+gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/covidtracking
 
 # Deploy to Cloud Run
-gcloud run deploy allneeded \
---image gcr.io/${GOOGLE_CLOUD_PROJECT}/allneeded
+gcloud run deploy covidtracking \
+--image gcr.io/${GOOGLE_CLOUD_PROJECT}/covidtracking
 ```
 
 

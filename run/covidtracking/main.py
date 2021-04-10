@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# [START cloudrun_allneeded_service]
-# [START run_allneeded_service]
+# [START cloudrun_covidtracking_service]
+# [START run_covidtracking_service]
 
 import csv
 import pandas as pd
@@ -48,5 +48,5 @@ def info():
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
-# [END run_allneeded_service]
-# [END cloudrun_allneeded_service]
+# [END run_covidtracking_service]
+# [END cloudrun_covidtracking_service]
