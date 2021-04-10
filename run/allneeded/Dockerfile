@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# [START cloudrun_helloworld_dockerfile]
-# [START run_helloworld_dockerfile]
+# [START cloudrun_allneeded_dockerfile]
+# [START run_allneeded_dockerfile]
 
 # Use the official lightweight Python image.
 # https://hub.docker.com/_/python
@@ -37,5 +37,5 @@ RUN pip install Flask gunicorn
 # Timeout is set to 0 to disable the timeouts of the workers to allow Cloud Run to handle instance scaling.
 CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app
 
-# [END run_helloworld_dockerfile]
-# [END cloudrun_helloworld_dockerfile]
+# [END run_allneeded_dockerfile]
+# [END cloudrun_allneeded_dockerfile]

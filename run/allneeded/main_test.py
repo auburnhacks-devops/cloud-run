@@ -12,22 +12,29 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# [START cloudrun_allneeded_service]
-# [START run_allneeded_service]
 import os
 
-from flask import Flask
+import pytest
 
-app = Flask(__name__)
-
-
-@app.route("/")
-def hello_world():
-    name = os.environ.get("NAME", "World")
-    return "Hello {}!".format(name)
+import main
 
 
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
-# [END run_allneeded_service]
-# [END cloudrun_allneeded_service]
+@pytest.fixture
+def client():
+    main.app.testing = True
+    return main.app.test_client()
+
+
+def test_handler_no_env_variable(client):
+    r = client.get("/")
+
+    assert r.data.decode() == "Hello World!"
+    assert r.status_code == 200
+
+
+def test_handler_with_env_variable(client):
+    os.environ["NAME"] = "Foo"
+    r = client.get("/")
+
+    assert r.data.decode() == "Hello Foo!"
+    assert r.status_code == 200
