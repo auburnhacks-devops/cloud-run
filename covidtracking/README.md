@@ -13,7 +13,7 @@ Cloud Run is a managed compute platform that enables you to run stateless contai
 # Deploy to Google Cloud Run
 1. Prepare a GitHub repo with your source code.
 2. Add a README.md file to the repo and add below code to the file.
-##[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
+##([![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run))
 3. Click the "Run on Google Cloud" Button to deploy the code.
 
 # To access the app
