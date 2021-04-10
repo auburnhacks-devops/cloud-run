@@ -19,4 +19,5 @@ Cloud Run is a managed compute platform that enables you to run stateless contai
 1. Cloud Shell output contains your application url as shown below.
 
 ![image](https://user-images.githubusercontent.com/82050282/114271573-0de88b80-99e0-11eb-940a-f58525f61243.png)
+
 2. Access the url from browser
