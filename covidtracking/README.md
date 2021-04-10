@@ -1,6 +1,5 @@
-# Cloud Run Hello World Sample
-
-This sample shows how to deploy a Hello World application to Cloud Run.
+# Cloud Run 
+Cloud Run is a managed compute platform that enables you to run stateless containers that are invocable via HTTP requests on either a fully managed environment
 
 [![Run in Google Cloud][run_img]][run_link]
 
