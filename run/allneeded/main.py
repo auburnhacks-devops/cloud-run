@@ -14,6 +14,9 @@
 
 # [START cloudrun_allneeded_service]
 # [START run_allneeded_service]
+import csv
+import lib.pandas as pd
+import requests
 import os
 
 from flask import Flask
