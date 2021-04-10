@@ -22,7 +22,7 @@ from flask import Flask,render_template,request,redirect,Response,flash,url_for
 import os     
 import sys
 from datetime import datetime
-
+CSV_URL = 'https://api.covidtracking.com/v1/states/current.csv'
 app = Flask(__name__)
 
 
