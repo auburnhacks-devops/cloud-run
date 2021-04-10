@@ -10,7 +10,7 @@ ENV APP_HOME /app
 WORKDIR $APP_HOME
 COPY . ./
 
-# Install production dependencies.
+# Install python dependencies.
 RUN pip install Flask gunicorn requests pandas
 
 # Run the web service on container startup. Here we use the gunicorn
