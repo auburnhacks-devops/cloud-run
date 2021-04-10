@@ -28,10 +28,9 @@ data=pd.read_csv(CSV_URL)
 app = Flask(__name__)
 
 
-@app.route("/")
-def hello_world():
-    name = os.environ.get("NAME", "World1")
-    return "What the {}!".format(name)
+@app.route('/')
+def Index():
+    return render_template('index.html')
 
 
 if __name__ == "__main__":
