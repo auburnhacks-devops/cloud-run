@@ -32,7 +32,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    name = os.environ.get("NAME", "World")
+    name = os.environ.get("NAME", "World12")
     return "Hello {}!".format(name)
 
 
