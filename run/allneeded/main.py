@@ -32,6 +32,19 @@ app = Flask(__name__)
 def Index():
     return render_template('index.html')
 
+@app.route('/info',methods=['POST','GET'])
+def info():
+    if request.method == 'POST':
+        Sname = request.form['Sname']
+        print(Sname)
+        Dbase = request.form['Dbase']
+        data1=data[(data['state']=='FL') & (data['date']==20210307)]   
+        #table = Table(data1)     
+        return  render_template('view.html',tables=[data1.to_html(classes='female')],
+    titles = ['na', 'Covid Imporamation for '+Sname])
+    else:
+        return("Bad request please verify the input values.")
+#Response (data1.to_json(orient='split'))
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
